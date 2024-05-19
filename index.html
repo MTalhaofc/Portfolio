@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="Portfolio.css">
+<link rel="icon" type="svg" class="h-1/2" href="/Project/assets/Favicon/XDev (2).svg">
+    <script src="https://kit.fontawesome.com/e28e3997b3.js" crossorigin="anonymous"></script>
+    <title>XDEV</title>
+    
+</head>
+
+<body class="font-poppins w-full overflow-x-hidden">
+    <header class="sticky top-0">
+        <div class="sidebar">
+            <nav class="sticky top-0 bg-gray-900">
+                <input type="checkbox" id="check" class="hidden">
+                <label for="check" class="checkbtn cursor-pointer">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <label class="logo text-2xl font-bold">XDEV</label>
+                <ul class="text-lg font-semibold float-right">
+                    <li><a href="#About" onclick="toggleSidebar()">About</a></li>
+                    <li><a href="#Experience" onclick="toggleSidebar()">Experience</a></li>
+                    <li><a href="#Projects" onclick="toggleSidebar()">Projects</a></li>
+                    <li><a href="#Cerifications" onclick="toggleSidebar()">Certifications</a></li>
+                    <li><a href="#Communities" onclick="toggleSidebar()">Communities</a></li>
+                    <li><a href="#ContactMe" onclick="toggleSidebar()">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <hr class="zero">
+    <nav class="downcolor h-1.5 "></nav>
+    <div class="About transition-all duration-500">
+        <section id="About">
+            <hr class="opacity-0">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mt-2">About</h2>
+            <div class="nameandpic flex flex-col md:flex-row justify-around items-center">
+                <div class="name mt-3 md:mt-0">
+                    <h1 class="md:text-3xl text-2xl font-bold mt-3 md:mt-0 text-white">Hi, I'm <span class="text-blue-500">Muhammad Talha.</span></h1>
+                    <h2  class="md:text-3xl text-2xl font-bold text-white  "><span class="text-blue-500 ">I'm a 
+                    </span> Software Engineer.</h2>
+
+                </div>
+                <div class="pic mt-3 md:mt-0">
+                    <img src="pp.png" name="pic" class="rounded-full md:h-60 md:w-60 h-52 w-52">
+                </div>
+            </div>
+            <div class="mt-8 flex justify-center">
+                <div class="flex flex-col md:flex-row">
+
+                <a href="https://www.linkedin.com/in/muhammad-talha-offofc/" target="_blank">
+                    <button class="text-white bg-blue-500 hover:bg-blue-950 md:mr-2 mr-0 py-2 px-4 mt-2 md:mt-0 rounded w-52">
+                <i class="fab fa-linkedin text-xl "></i>
+                Linkedin</a>
+            </button>
+            </a>
+                <button  name="cv"  onclick="downloadcv()"
+                    class="bg-blue-950 hover:bg-blue-500 text-white mt-2 md:mt-0 md:mr-2  py-2 px-4 rounded w-52">       
+                         <i class="fa-solid fa-download text-white"></i>
+Download CV
+                </button>
+            <a href="https://github.com/MTalhaofc"  target="_blank">
+                <button  class="  bg-red-700 text-white hover:bg-red-950 py-2 px-4 md:mr-2 mr-0 mt-2 md:mt-0 rounded w-52">
+                    <i class="fa-brands fa-square-github text-xl mr-1"></i>Github</button>
+        </a>
+    </div>
+        </div>
+            <div class="intro px-10 mt-8">
+                <h4 class="md:text-xl text-lg text-white">
+                    Welcome to my <span class="text-blue-500">Tech Space</span>, where I fuse creativity with code. I'm a skilled <span class="text-blue-500">Android developer</span>, shaping sleek and intuitive mobile experiences with Kotlin. 
+                    Leveraging <span class="text-blue-500">Laravel</span>, I build robust backend systems, while <span class="text-blue-500">TailwindCss </span> 
+                    and <span class="text-blue-500">ReactJS</span> empowers me to create captivating
+                     user interfaces. Let's embark on a journey where <span class="text-blue-500">technology</span>
+                      meets <span class="text-blue-500"> creativity</span>, transforming ideas 
+                     into digital masterpieces!
+                </h4>
+            </div>
+            <hr class="two my-8">
+            <div class="image"></div>
+        </section>
+    </div>
+    <section id="Experience" >
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-white"> Work Experience</h2>
+        <div class="Experience" >
+            <div class="container1 flex flex-wrap justify-evenly">
+                <div class="bg-slate-950 mt-4 border-2 border-blue-800 hover:border-l-0 hover:border-b-0 hover:shadow-sm transition duration-1000 p-1 w-60 h-auto">
+                    <h1 class="text-white">Ibrahim Fibres Limited</h1>
+                    <p class="text-gray-600">Software Engineer Internee<br>July 2023 - Aug 2023</p>
+                    <p class="text-gray-400">• Developed reports of organization using PL/SQL, improving data analysis capabilities. <br>
+                        • Collaborated in Cloud technology to enhance accessibility and scalability of organizational data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="three my-8">
+    <section id="Projects">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Projects</h2>
+        <div class="flex w-full justify-evenly flex-wrap">
+<a href="https://github.com/MTalhaofc/Notesapp" target="_blank">
+    <div class=" flex flex-col items-center bg-white rounded-xl  m-1 transition-transform duration-300 transform hover:scale-110" > 
+        <img class="h-32 rounded-t-xl  " src="/Project/dist/assets/Images/notesapp.png">
+        <p class="text-md font-bold  text-slate-950">Notes App</p>
+        <div class="flex flex-row items-center">
+        <p class="  text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+    </div>
+    </div></a>
+    <a href="https://github.com/MTalhaofc/GearNexusWeb" target="_blank"> 
+    <div class=" flex flex-col mt-2 items-center bg-white rounded-xl  m-1 transition-transform duration-300 transform hover:scale-110" > 
+        <img class="h-32 rounded-t-xl  " src="/Project/dist/assets/Images/Gearnexusweb.png">
+        <p class="text-md font-bold  text-slate-950">Gear Nexus</p>
+        <div class="flex flex-row items-center">
+        <p class="  text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+    </div>
+    </div></a>
+    <a href="https://github.com/MTalhaofc/Carea" target="_blank">
+    <div class=" flex flex-col mt-2 items-center bg-white rounded-xl  m-1 transition-transform duration-300 transform hover:scale-110" > 
+        <img class="h-32 rounded-t-xl  " src="/Project/dist/assets/Images/Group 2.png">
+        <p class="text-md font-bold  text-slate-950">Carea</p>
+        <div class="flex flex-row items-center">
+        <p class="  text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+    </div>
+    </div>
+</a>
+    <a href="https://github.com/MTalhaofc/GearNexusApp" target="_blank">
+    <div class=" flex flex-col mt-2 items-center bg-white rounded-xl  m-1 transition-transform duration-300 transform hover:scale-110" > 
+        <img class="h-32 rounded-t-xl  " src="/Project/dist/assets/Images/Group 3.png">
+        <p class="text-md font-bold  text-slate-950">GearNexus App</p>
+        <div class="flex flex-row items-center">
+        <p class="  text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+    </div>
+</div>
+</a>
+
+        </div>
+
+           </section>
+    <hr class="four my-8">
+    <section id="Cerifications">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Certifications</h2>
+        <div class="Certifications flex justify-evenly flex-wrap ml-2 mr-2 mt-8">
+            <div class=" w-44  h-32 mt-2 bg-white p-2 rounded-md hover:text-white hover:bg-black  transition duration-500   shadow-md">
+                <a href="https://www.freecodecamp.org/certification/TalhaxD/responsive-web-design" target="_blank"
+                    class="flex items-center justify-center space-x-2">
+                    <i class="fab fa-free-code-camp"></i>
+                    <div>
+                        <h5 class="text-lg font-semibold">Free Code Camp</h5>
+                        <h6 class="text-mddddd">Responsive Web Design</h6>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class=" w-44 h-32 mt-2 bg-white p-2 hover:text-white hover:bg-black  transition duration-500 rounded-md shadow-md">
+                <a href=""
+                    target="_blank" class="flex items-center justify-center space-x-2">
+                    <i class="fab fa-microsoft"></i>
+                    <div>
+                        <h5 class="text-lg font-semibold">Microsoft Learn</h5>
+                        <h6 class="text-md">MLOPs</h6>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="w-44  h-32 flex flex-wrap mt-2 hover:text-white hover:bg-black  transition duration-500 bg-white p-2 rounded-md shadow-md">
+                <a href="https://www.cloudskillsboost.google/public_profiles/c8a52ad3-d891-41d2-8f17-7dca5c63885d" target="_blank" class="flex items-center justify-center space-x-2">
+                    <i class="fab fa-google"></i>
+                    <div>
+                        <h5 class="text-lg font-semibold">Google CLoud</h5>
+                        <h6 class="text-md">Vertex AI, Gen AI & LLM's</h6>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <hr class="five my-8">
+    <section id="Communities">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Communities</h2>
+        <div class="Communties mt-8">
+            <div class="container1 flex flex-wrap justify-evenly">
+<div class="bg-slate-950 border-2 mt-2 border-blue-800 p-1 w-60 h-auto">
+    <h1 class="text-white">Google Developer Student Club-GDSC</h1>
+    <p class="text-gray-600">Creative Team Lead<br>Jan 2022 - Present</p>
+    <p class="text-gray-400">Organized 4+ on-campus mega events and 
+        20+ online events across Pakistan, engaging 250+
+        attendees in hackathons, coding competitions, and panel talks</p>
+</div>
+<div class="bg-slate-950 border-2 mt-2 border-blue-800 p-1 w-60 h-auto">
+    <h1 class="text-white">Kubernetes Community Day Lahore - KCD </h1>
+    <p class="text-gray-600">Founding Core Team <br>June-2023 - Jan 2024</p>
+    <p class="text-gray-400">Founded First Ever Kubernetes Community Day in Pakistan and made that possible in Lahore with 300+ Audience</p>
+</div>
+<div class="bg-slate-950 border-2 mt-2 border-blue-800 p-1 w-60 h-auto">
+    <h1 class="text-white">Microsft Learn Student Ambassador - MLSA</h1>
+    <p class="text-gray-600">Beta Milestone<br>Aug 2023 - Present</p>
+    <p class="text-gray-400">Led Azure Virtual Machine projects and hosted events like Azure Cloud Challenge and
+        GitHub introduction, mentoring 10+ students in Azure</p>
+</div>
+
+
+        </div>
+    </section>
+    <hr class="six my-8">
+    <section id="ContactMe">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Contact Me</h2>
+        <div class="ContactMe">
+           
+            <p class="text-white text-center mt-6">Liked my Work or Want to know more about me :</p>
+            <div class="socials flex justify-around mt-2">
+             
+                <a href="mailto:talha0750@gmail.com" target="_blank">
+                    <button class="bg-blue-500 w-44 rounded-lg h-12 text-center flex flex-row hover:capitalize hover:bg-blue-950"> 
+                    <i class="fas fa-envelope text-xl text-white text-center mt-3 ml-2 hover:text-blue-500"></i>
+                    <p class="text-white ml-4 mt-3">Send me a Mail
+                    </p></button></a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="bg-gray-900">
+        <hr class="eight my-8">
+        <h3 class="footer text-xl font-bold ml-4 md:ml-2 text-white" >X Developers</h3>
+        <p class="footer text-lg ml-4 md:ml-2 text-white">EST.2023</p>
+        <p class="footer2 text-md text-center text-white mt-2 md:mt-0">
+            "Softwares To Reach Your Destination"
+            <br>All Rights Reserved@2023
+        </p></div>
+    </footer>
+    <script>
+        function toggleSidebar() {
+            var checkbox = document.getElementById("check");
+            if (checkbox.checked) {
+                checkbox.checked = false;
+                var animatedText = document.getElementById('animatedText');
+            animatedText.classList.toggle('hidden');
+            }
+           
+        }
+
+        function downloadcv() {
+    var url = 'Muhammad_Talha_Resume.pdf';
+    
+    var a = document.createElement('a');
+    a.href = url;
+    
+    a.download = 'Muhammad_Talha_Resume.pdf';
+    
+    document.body.appendChild(a);
+    a.click();
+    
+    document.body.removeChild(a);
+}
+</script>
+</body>
+
+</html>
