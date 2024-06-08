@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+}
+    body{
+    font-family: "poppins",sans-serif;
+    background-color: #090e0b;   
+}
+body.locked{
+        overflow: hidden;
+    
+}
+header{
+    position: sticky;
+}
+nav{
+    position: sticky;
+height: 60px;
+width: 100%;
+}
+nav.color{
+    height: 5px;
+    width: 100%;
+    background-color: #0a66c2;
+}
+nav.downcolor{
+    height: 1.5px;
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+
+}
+label.logo{
+    position: sticky;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 0 100px;
+    font-weight: none;
+    line-height: 60px;
+}
+nav ul{
+    float:right;
+    margin-right: 20px;
+}
+nav ul li {
+    display:inline-block;
+    line-height: 60px;
+margin: 0 5px;}
+nav ul li a {
+    color:#ffffff;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+a.header:hover{
+background-color:#4169e1;
+transition: .5s;
+color:white;
+
+
+}
+.checkbtn{
+    position: sticky;
+font-size: 30px;
+color: #ffffff;
+float: right;
+line-height: 60px;
+margin-right: 40px;
+cursor:pointer;
+display: none;
+}
+#check{
+    display: none;
+}
+@media(max-width:952px){
+    header{
+    position: sticky;}
+    label.logo{
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+@media(max-width:858px)
+{
+    .checkbtn{
+        display: block;
+        font-size: 30px;
+        color: #ffffff;
+        float: right;
+        line-height: 60px;
+        margin-right: 40px;
+        cursor:pointer;
+    
+    }
+        
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #090e0b;
+        top: 64px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        color:white;
+    }
+    nav ul li{
+
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    
+    }
+    nav ul li a{
+        font-size: 20px;
+    color:white;
+    }
+    a:hover.a.active{
+        background: none;
+        
+    }
+#check:checked ~ ul{
+    left:0;
+    
+}
+#check:checked ~ .checkbtn{
+    display: block;
+    font-size: 30px;
+    color: #ffffff;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor:pointer;
+    position:relative;
+}
+}
