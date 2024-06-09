@@ -6,13 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="Portfolio.css">
-<link rel="icon" type="svg" class="h-1/2" href="/Project/assets/Favicon/XDev (2).svg">
+<link rel="icon" type="svg" class="h-1/2" href="XDev (2).svg">
     <script src="https://kit.fontawesome.com/e28e3997b3.js" crossorigin="anonymous"></script>
     <title>XDEV</title>
     
 </head>
 
-<body class="font-poppins w-full overflow-x-hidden">
+<body class="font-poppins w-full overflow-x-hidden ">
+    <div id="preloader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="test" cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+        <div class="loader triangle">
+            <svg viewBox="0 0 86 80">
+                <polygon points="43 8 79 72 7 72"></polygon>
+            </svg>
+        </div>
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <rect x="8" y="8" width="64" height="64"></rect>
+            </svg>
+        </div>
+        
+    </div>
+<div  id="main-content">
     <header class="sticky top-0">
         <div class="sidebar">
             <nav class="sticky top-0 bg-gray-900">
@@ -34,7 +53,9 @@
     </header>
     <hr class="zero">
     <nav class="downcolor h-1.5 "></nav>
-    <div class="About transition-all duration-500">
+    <div id="all-content" >
+   
+    <div id="main-content" class="About ">
         <section id="About">
             <hr class="opacity-0">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-white mt-2">About</h2>
@@ -45,8 +66,8 @@
                     </span> Software Engineer.</h2>
 
                 </div>
-                <div class="pic mt-3 md:mt-0">
-                    <img src="pp.png" name="pic" class="rounded-full md:h-60 md:w-60 h-52 w-52">
+                <div class="pic mt-3 md:mt-0 ">
+                    <img src="pp.png"  name="pic" class="rounded-full md:h-60 md:w-60 h-52 w-52">
                 </div>
             </div>
             <div class="mt-8 flex justify-center">
@@ -79,13 +100,13 @@ Download CV
                      into digital masterpieces!
                 </h4>
             </div>
-            <hr class="two my-8">
+            <hr class="two my-8 ">
             <div class="image"></div>
         </section>
     </div>
-    <section id="Experience" >
+    <section id="Experience" class="fade-in-bottom" >
         <h2 class="text-3xl md:text-4xl font-bold text-center text-white"> Work Experience</h2>
-        <div class="Experience" >
+        <div  class="Experience" >
             <div class="container1 flex flex-wrap justify-evenly">
                 <div class="bg-slate-950 mt-4 border-2 border-blue-800 hover:border-l-0 hover:border-b-0 hover:shadow-sm transition duration-1000 p-1 w-60 h-auto">
                     <h1 class="text-white">Ibrahim Fibres Limited</h1>
@@ -97,12 +118,12 @@ Download CV
         </div>
     </section>
     <hr class="three my-8">
-    <section id="Projects">
+    <section id="Projects" class="fade-in-bottom">
         <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Projects</h2>
         <div class="flex w-full justify-evenly flex-wrap">
 <a href="https://github.com/MTalhaofc/Notesapp" target="_blank">
     <div class=" flex flex-col items-center bg-white rounded-xl  m-1 transition-transform duration-300 transform hover:scale-110" > 
-        <img class="h-32 rounded-t-xl  " src="/Project/dist/assets/Images/notesapp.png">
+        <img class="h-32 rounded-t-xl  " src="notesapp.png">
         <p class="text-md font-bold  text-slate-950">Notes App</p>
         <div class="flex flex-row items-center">
         <p class="  text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
@@ -110,7 +131,7 @@ Download CV
     </div></a>
     <a href="https://github.com/MTalhaofc/GearNexusWeb" target="_blank"> 
     <div class=" flex flex-col mt-2 items-center bg-white rounded-xl  m-1 transition-transform duration-300 transform hover:scale-110" > 
-        <img class="h-32 rounded-t-xl  " src="/Project/dist/assets/Images/Gearnexusweb.png">
+        <img class="h-32 rounded-t-xl  " src="Gearnexusweb.png">
         <p class="text-md font-bold  text-slate-950">Gear Nexus</p>
         <div class="flex flex-row items-center">
         <p class="  text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
@@ -118,7 +139,7 @@ Download CV
     </div></a>
     <a href="https://github.com/MTalhaofc/Carea" target="_blank">
     <div class=" flex flex-col mt-2 items-center bg-white rounded-xl  m-1 transition-transform duration-300 transform hover:scale-110" > 
-        <img class="h-32 rounded-t-xl  " src="/Project/dist/assets/Images/Group 2.png">
+        <img class="h-32 rounded-t-xl  " src="Group 2.png">
         <p class="text-md font-bold  text-slate-950">Carea</p>
         <div class="flex flex-row items-center">
         <p class="  text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
@@ -127,7 +148,7 @@ Download CV
 </a>
     <a href="https://github.com/MTalhaofc/GearNexusApp" target="_blank">
     <div class=" flex flex-col mt-2 items-center bg-white rounded-xl  m-1 transition-transform duration-300 transform hover:scale-110" > 
-        <img class="h-32 rounded-t-xl  " src="/Project/dist/assets/Images/Group 3.png">
+        <img class="h-32 rounded-t-xl  " src="Group 3.png">
         <p class="text-md font-bold  text-slate-950">GearNexus App</p>
         <div class="flex flex-row items-center">
         <p class="  text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
@@ -139,7 +160,7 @@ Download CV
 
            </section>
     <hr class="four my-8">
-    <section id="Cerifications">
+    <section id="Cerifications" class="fade-in-bottom">
         <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Certifications</h2>
         <div class="Certifications flex justify-evenly flex-wrap ml-2 mr-2 mt-8">
             <div class=" w-44  h-32 mt-2 bg-white p-2 rounded-md hover:text-white hover:bg-black  transition duration-500   shadow-md">
@@ -177,7 +198,7 @@ Download CV
         </div>
     </section>
     <hr class="five my-8">
-    <section id="Communities">
+    <section id="Communities" class="fade-in-bottom">
         <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Communities</h2>
         <div class="Communties mt-8">
             <div class="container1 flex flex-wrap justify-evenly">
@@ -204,7 +225,7 @@ Download CV
         </div>
     </section>
     <hr class="six my-8">
-    <section id="ContactMe">
+    <section id="ContactMe" class="fade-in-bottom">
         <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Contact Me</h2>
         <div class="ContactMe">
            
@@ -227,9 +248,12 @@ Download CV
         <p class="footer text-lg ml-4 md:ml-2 text-white">EST.2023</p>
         <p class="footer2 text-md text-center text-white mt-2 md:mt-0">
             "Softwares To Reach Your Destination"
-            <br>All Rights Reserved@2023
+            <br>All Rights Reserved@2024
         </p></div>
+    
     </footer>
+</div>
+</div>
     <script>
         function toggleSidebar() {
             var checkbox = document.getElementById("check");
@@ -254,7 +278,50 @@ Download CV
     
     document.body.removeChild(a);
 }
+window.addEventListener('load', function () {
+    var preloader = document.getElementById('preloader');
+    var mainContent = document.getElementById('main-content');
+    var minimumTime = 1200; 
+    var loadTime = performance.now(); 
+
+    function hidePreloader() {
+        var currentTime = performance.now();
+        var elapsedTime = currentTime - loadTime;
+        if (elapsedTime >= minimumTime) {
+            preloader.style.display = 'none';
+            mainContent.classList.add('fade-in');
+        } else {
+            setTimeout(hidePreloader, minimumTime - elapsedTime);
+        }
+    }
+
+    hidePreloader();
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.fade-in-bottom');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Uncomment the next line to trigger the animation only once
+                // observer.unobserve(entry.target);
+            } else {
+                // Remove the 'visible' class if you want the animation to repeat
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+
+
 </script>
+
 </body>
 
 </html>
