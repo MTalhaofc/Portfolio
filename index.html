@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="Portfolio.css">
+<link rel="icon" type="svg" class="h-1/2" href="XDev (2).svg">
+    <script src="https://kit.fontawesome.com/e28e3997b3.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <title>XDEV</title>
+    
+</head>
+
+<body class="font-poppins w-full overflow-x-hidden ">
+    <div id="preloader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="test" cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+        <div class="loader triangle">
+            <svg viewBox="0 0 86 80">
+                <polygon points="43 8 79 72 7 72"></polygon>
+            </svg>
+        </div>
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <rect x="8" y="8" width="64" height="64"></rect>
+            </svg>
+        </div>
+        
+    </div>
+<div  id="main-content">
+    <header class="sticky top-0">
+        <div class="sidebar">
+            <nav class="sticky top-0 bg-gray-900">
+                <input type="checkbox" id="check" class="hidden">
+                <label for="check" class="checkbtn cursor-pointer">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <label class="logo text-2xl font-bold">XDEV</label>
+                <ul class="text-lg font-semibold float-right">
+                    <li><a href="#About" onclick="toggleSidebar()">About</a></li>
+                    <li><a href="#Experience" onclick="toggleSidebar()">Experience</a></li>
+                    <li><a href="#Projects" onclick="toggleSidebar()">Projects</a></li>
+                    <li><a href="#Cerifications" onclick="toggleSidebar()">Certifications</a></li>
+                    <li><a href="#Communities" onclick="toggleSidebar()">Communities</a></li>
+                    <li><a href="#ContactMe" onclick="toggleSidebar()">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <hr class="zero">
+    <nav class="downcolor h-1.5 "></nav>
+    <div id="all-content" >
+   
+    <div id="main-content" class="About ">
+        <section id="About">
+            <hr class="opacity-0">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mt-2">About</h2>
+            <div class="nameandpic flex flex-col md:flex-row justify-around items-center">
+                <div class="name mt-3 md:mt-0">
+                    <h1 class="md:text-3xl text-2xl font-bold mt-3 md:mt-0 text-white">Hi, I'm <span class="text-blue-500">Muhammad Talha.</span></h1>
+                    <h2  class="md:text-3xl text-2xl font-bold text-white  "><span class="text-blue-500 ">I'm a 
+                    </span> Software Engineer.</h2>
+
+                </div>
+                <div class="pic mt-3 md:mt-0 ">
+                    <img src="myimage_round_pfp.jpg"  name="pic" class="rounded-full md:h-60 md:w-60 h-52 w-52">
+                </div>
+            </div>
+            <div class="mt-8 flex justify-center">
+                <div class="flex flex-col md:flex-row">
+
+                <a href="https://www.linkedin.com/in/muhammad-talha-offofc/" target="_blank">
+                    <button class="text-white bg-blue-500 hover:bg-blue-950 md:mr-2 mr-0 py-2 px-4 mt-2 md:mt-0 rounded w-52">
+                <i class="fab fa-linkedin text-xl "></i>
+                Linkedin</a>
+            </button>
+            </a>
+                <button  name="cv"  onclick="downloadcv()"
+                    class="bg-blue-950 hover:bg-blue-500 text-white mt-2 md:mt-0 md:mr-2  py-2 px-4 rounded w-52">       
+                         <i class="fa-solid fa-download text-white"></i>
+Download CV
+                </button>
+            <a href="https://github.com/MTalhaofc"  target="_blank">
+                <button  class="  bg-red-700 text-white hover:bg-red-950 py-2 px-4 md:mr-2 mr-0 mt-2 md:mt-0 rounded w-52">
+                    <i class="fa-brands fa-square-github text-xl mr-1"></i>Github</button>
+        </a>
+    </div>
+        </div>
+            <div class="intro px-10 mt-8">
+                <h4 class="md:text-xl text-lg text-white">
+                    Welcome to my <span class="text-blue-500">Tech Space</span>, where I fuse creativity with code. I'm a skilled <span class="text-blue-500">Android developer</span>, shaping sleek and intuitive mobile experiences with Kotlin. 
+                    Leveraging <span class="text-blue-500">Laravel</span>, I build robust backend systems, while <span class="text-blue-500">TailwindCss </span> 
+                    and <span class="text-blue-500">ViteJS</span> empowers me to create captivating
+                     user interfaces. Let's embark on a journey where <span class="text-blue-500">technology</span>
+                      meets <span class="text-blue-500"> creativity</span>, transforming ideas 
+                     into digital masterpieces!
+                </h4>
+            </div>
+            <hr class="two my-8 ">
+            <div class="image"></div>
+        </section>
+    </div>
+    <section id="Experience" class="fade-in-bottom" >
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-white"> Work Experience</h2>
+        <div  class="Experience" >
+            <div class="container1 flex flex-wrap justify-evenly">
+                <div class="bg-slate-950 mt-4 border-2 border-blue-800 hover:border-l-0 hover:border-b-0 hover:shadow-sm transition duration-1000 p-1 w-60 h-auto">
+                    <h1 class="text-white">Ibrahim Fibres Limited</h1>
+                    <p class="text-gray-600">Software Engineer Internee<br>July 2023 - Aug 2023</p>
+                    <p class="text-gray-400">• Developed reports of organization using PL/SQL, improving data analysis capabilities. <br>
+                        • Collaborated in Cloud technology to enhance accessibility and scalability of organizational data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="three my-8">
+    <section id="Projects" class="fade-in-bottom">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mx-auto">Projects</h2>
+            <div class="flex-shrink-0">
+                <!-- Navigation Buttons -->
+                <button id="left-btn" class="carousel-btn left-btn rounded-lg mr-2" onclick="moveLeft()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="right-btn" class="carousel-btn right-btn rounded-lg" onclick="moveRight()">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    
+        <style>
+            .carousel-container {
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                max-width: 1280px; /* Limit the width for a better look */
+                margin: auto; /* Center the carousel */
+            }
+    
+            .carousel {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+    
+            .carousel-item {
+                flex: 0 0 50%; /* Show 2 items at a time on mobile screens */
+            }
+    
+            @media (min-width: 640px) {
+                .carousel-item {
+                    flex: 0 0 33.33%; /* Show 3 items at a time on small screens */
+                }
+            }
+    
+            @media (min-width: 768px) {
+                .carousel-item {
+                    flex: 0 0 25%; /* Show 4 items at a time on medium screens */
+                }
+            }
+    
+            .carousel-btn {
+                background-color: #3b82f6; /* Tailwind's bg-blue-500 */
+                color: #ffffff;
+                border: none;
+                cursor: pointer;
+                padding: 0.5rem;
+                font-size: 1.5rem;
+                width: 50px;
+                z-index: 10;
+                transition: background-color 0.3s ease;
+                margin-right: 15px;
+
+            }
+    
+            .carousel-btn:hover {
+                background-color: #2563eb; /* Tailwind's bg-blue-600 on hover */
+            }
+    
+            .carousel-btn:disabled {
+                background-color: rgba(0, 0, 0, 0.3);
+                cursor: not-allowed;
+            }
+    
+            .carousel-btn:disabled:hover {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+        </style>
+    
+        <!-- Carousel Structure -->
+        <div class="carousel-container">
+            
+                <div class="carousel" id="carousel">
+
+                    <div class="carousel-item p-4">
+                        <a href="https://github.com/MTalhaofc/EzHealth target="_blank">
+                          <div class="flex flex-col items-center bg-white rounded-lg m-1 transition-transform duration-300 transform hover:scale-110">
+                            <img class="h-32 rounded-t-xl" src="ez_health_web.png" alt="CUI Paper Sum">
+                            <p class="text-md font-bold text-slate-950">Ez Health </p>
+                            <div class="flex flex-row items-center">
+                              <p class="text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+
+
+                      <div class="carousel-item p-4">
+                        <a href="https://github.com/MTalhaofc/cui_papersum" target="_blank">
+                          <div class="flex flex-col items-center bg-white rounded-lg m-1 transition-transform duration-300 transform hover:scale-110">
+                            <img class="h-32 rounded-t-xl" src="papersum1.png" alt="CUI Paper Sum">
+                            <p class="text-md font-bold text-slate-950">Cui Papersum</p>
+                            <div class="flex flex-row items-center">
+                              <p class="text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+
+
+
+
+                <div class="carousel-item p-4">
+                    <a href="https://github.com/MTalhaofc/Ez-Health-Android-App" target="_blank">
+                      <div class="flex flex-col items-center bg-white rounded-lg m-1 transition-transform duration-300 transform hover:scale-110">
+                        <img class="h-32 rounded-t-xl" src="ez_health_mobile.png" alt="CUI Paper Sum">
+                        <p class="text-md font-bold text-slate-950">Ez Health App</p>
+                        <div class="flex flex-row items-center">
+                          <p class="text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                <!-- Project 1 -->
+               
+                <!-- Project 2 -->
+                <div class="carousel-item p-4">
+                    <a href="https://github.com/MTalhaofc/GearNexusWeb" target="_blank">
+                        <div class="flex flex-col items-center bg-white rounded-lg m-1 transition-transform duration-300 transform hover:scale-110">
+                            <img class="h-32 rounded-t-xl" src="Gearnexusweb.png" alt="Gear Nexus Web">
+                            <p class="text-md font-bold text-slate-950">Gear Nexus</p>
+                            <div class="flex flex-row items-center">
+                                <p class="text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Continue adding other projects similarly -->
+                <div class="carousel-item p-4">
+                    <a href="https://github.com/MTalhaofc/GearNexusApp-Android" target="_blank">
+                      <div class="flex flex-col items-center bg-white rounded-lg m-1 transition-transform duration-300 transform hover:scale-110">
+                        <img class="h-32 rounded-t-xl" src="GearNexus.png" alt="GearNexus App">
+                        <p class="text-md font-bold text-slate-950">GearNexus App</p>
+                        <div class="flex flex-row items-center">
+                          <p class="text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                <div class="carousel-item p-4">
+                    <a href="https://github.com/MTalhaofc/Carea" target="_blank">
+                      <div class="flex flex-col items-center bg-white rounded-lg m-1 transition-transform duration-300 transform hover:scale-110">
+                        <img class="h-32 rounded-t-xl" src="Group 2.png" alt="Carea">
+                        <p class="text-md font-bold text-slate-950">Carea</p>
+                        <div class="flex flex-row items-center">
+                          <p class="text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- Project 4 -->
+                 
+                  <!-- Project 4 -->
+                 
+                  <div class="carousel-item p-4">
+                    <a href="https://github.com/MTalhaofc/Notesapp" target="_blank">
+                        <div class="flex flex-col items-center bg-white rounded-lg m-1 transition-transform duration-300 transform hover:scale-110">
+                            <img class="h-32 rounded-t-xl" src="notesapp.png" alt="Notes App">
+                            <p class="text-md font-bold text-slate-950">Notes App</p>
+                            <div class="flex flex-row items-center">
+                                <p class="text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Ai text summarizer -->
+                <div class="carousel-item p-4">
+                    <a href="https://github.com/MTalhaofc/AI_Text_Summarizer" target="_blank">
+                        <div class="flex flex-col items-center bg-white rounded-lg m-1 transition-transform duration-300 transform hover:scale-110">
+                            <img class="h-32 rounded-t-xl" src="ai_text_summarizer.png" alt="Notes App">
+                            <p class="text-md font-bold text-slate-950">AI Text Summarizer</p>
+                            <div class="flex flex-row items-center">
+                                <p class="text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+<!-- TTalks -->
+<div class="carousel-item p-4">
+    <a href="https://github.com/MTalhaofc/TTalks" target="_blank">
+      <div class="flex flex-col items-center bg-white rounded-lg m-1 transition-transform duration-300 transform hover:scale-110">
+        <img class="h-32 rounded-t-xl" src="TTalks.png" alt="Carea">
+        <p class="text-md font-bold text-slate-950">Ttalks</p>
+        <div class="flex flex-row items-center">
+          <p class="text-gray-500">Check in Github</p> <i class="fas fa-arrow-right ml-1"></i>
+        </div>
+      </div>
+    </a>
+  </div>
+            </div>
+        </div>
+    </section>
+    
+    <hr class="four my-8">
+    <section id="Cerifications" class="fade-in-bottom">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Certifications</h2>
+        <div class="Certifications flex justify-evenly flex-wrap ml-2 mr-2 mt-8">
+            <div class=" w-44  h-32 mt-2 bg-white p-2 rounded-md hover:text-white hover:bg-black  transition duration-500   shadow-md">
+                <a href="https://www.freecodecamp.org/certification/TalhaxD/responsive-web-design" target="_blank"
+                    class="flex items-center justify-center space-x-2">
+                    <i class="fab fa-free-code-camp"></i>
+                    <div>
+                        <h5 class="text-lg font-semibold">Free Code Camp</h5>
+                        <h6 class="text-mddddd">Responsive Web Design</h6>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class=" w-44 h-32 mt-2 bg-white p-2 hover:text-white hover:bg-black  transition duration-500 rounded-md shadow-md">
+                <a href=""
+                    target="_blank" class="flex items-center justify-center space-x-2">
+                    <i class="fab fa-microsoft"></i>
+                    <div>
+                        <h5 class="text-lg font-semibold">Microsoft Learn</h5>
+                        <h6 class="text-md">MLOPs</h6>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="w-44  h-32 flex flex-wrap mt-2 hover:text-white hover:bg-black  transition duration-500 bg-white p-2 rounded-md shadow-md">
+                <a href="https://www.cloudskillsboost.google/public_profiles/c8a52ad3-d891-41d2-8f17-7dca5c63885d" target="_blank" class="flex items-center justify-center space-x-2">
+                    <i class="fab fa-google"></i>
+                    <div>
+                        <h5 class="text-lg font-semibold">Google CLoud</h5>
+                        <h6 class="text-md">Vertex AI, Gen AI & LLM's</h6>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="w-44  h-32 flex flex-wrap mt-2 hover:text-white hover:bg-black  transition duration-500 bg-white p-2 rounded-md shadow-md">
+                <a href="https://www.cloudskillsboost.google/public_profiles/c8a52ad3-d891-41d2-8f17-7dca5c63885d" target="_blank" class="flex items-center justify-center space-x-2">
+                    <i class="fa fa-certificate"></i>
+                    <div>
+                        <h5 class="text-lg font-semibold">Postman</h5>
+                        <h6 class="text-md">API's & Postman Basics</h6>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <hr class="five my-8">
+    <section id="Communities" class="fade-in-bottom">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Communities</h2>
+        <div class="Communties mt-8">
+            <div class="container1 flex flex-wrap justify-evenly">
+<div class="bg-slate-950 border-2 mt-2 border-blue-800 p-1 w-60 h-auto">
+    <h1 class="text-white">Google Developer Student Club-GDSC</h1>
+    <p class="text-gray-600">Creative Team Lead<br>Jan 2022 - Present</p>
+    <p class="text-gray-400">Organized 4+ on-campus mega events and 
+        20+ online events across Pakistan, engaging 250+
+        attendees in hackathons, coding competitions, and panel talks</p>
+</div>
+<div class="bg-slate-950 border-2 mt-2 border-blue-800 p-1 w-60 h-auto">
+    <h1 class="text-white">Kubernetes Community Day Lahore - KCD </h1>
+    <p class="text-gray-600">Founding Core Team <br>June-2023 - Jan 2024</p>
+    <p class="text-gray-400">Founded First Ever Kubernetes Community Day in Pakistan and made that possible in Lahore with 300+ Audience</p>
+</div>
+<div class="bg-slate-950 border-2 mt-2 border-blue-800 p-1 w-60 h-auto">
+    <h1 class="text-white">Microsft Learn Student Ambassador - MLSA</h1>
+    <p class="text-gray-600">Beta Milestone<br>Aug 2023 - Present</p>
+    <p class="text-gray-400">Led Azure Virtual Machine projects and hosted events like Azure Cloud Challenge and
+        GitHub introduction, mentoring 10+ students in Azure</p>
+</div>
+
+
+        </div>
+
+        <div class="grid grid-cols-4 gap-4 p-4 max-w-screen-lg mx-auto">
+            <img src="mlsa_github_abdulraheem.jpeg" alt="Community 1" class="w-full h-48 object-cover rounded-lg">
+            <img src="kcd_self.jpeg" alt="Community 2" class="w-full h-48 object-cover rounded-lg">
+            <img src="kcd_audience.jpeg" alt="Community 3" class="w-full h-48 object-cover rounded-lg">
+            <img src="mlsa_github_ghayas.jpeg" alt="Community 4" class="w-full h-48 object-cover rounded-lg">
+            <img src="tegathon_self.jpeg" alt="Community 5" class="w-full h-48 object-cover rounded-lg">
+            <img src="mlsa_github_zain.jpeg" alt="Community 6" class="w-full h-48 object-cover rounded-lg">
+            <img src="tegathon_team.jpeg" alt="Community 7" class="w-full h-48 object-cover rounded-lg">
+            <img src="mlsa_github_rashmi.jpeg" alt="Community 8" class="w-full h-48 object-cover rounded-lg">
+          </div>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- For communities images -->
+ <div class="mt-8">
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="kcd_self.jpeg" style="width:100%">
+      <div class="text">At KCD Lahore 🇵🇰 </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="kcd_audience.jpeg" style="width:100%">
+      <div class="text">300+ Audience @KCD Lahore 🇵🇰</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 8</div>
+      <img src="mlsa_github_abdulraheem.jpeg"  class="h-48 w-[50%]" >
+      <div class="text">Github Workshop with GCE</div>
+    </div>
+  
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 8</div>
+        <img src="mlsa_github_ghayas.jpeg"  class="h-48 w-[50%]" >
+        <div class="text">Web App in Azure</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 8</div>
+        <img src="mlsa_github_zain.jpeg" style="width:100%">
+        <div class="text">AI CHATBOT In Azure</div>
+      </div>
+
+
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 8</div>
+        <img src="mlsa_github_rashmi.jpeg"  class="h-48 w-[50%]" >
+        <div class="text">Azure Machine Learning Studio</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">7 / 8</div>
+        <img src="tegathon_self.jpeg" style="width:100%">
+        <div class="text">Organizer @Tegathon</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">38 / 8</div>
+        <img src="mlsa_github_abdulraheem.jpeg" style="width:100%">
+        <div class="text">Teagthon Team & Audience</div>
+      </div>
+
+
+      
+
+
+
+
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+   
+  </div>
+</div>
+
+<style>
+    * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+</style>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    </section>
+    <hr class="six my-8">
+    <section id="ContactMe" class="fade-in-bottom">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Contact Me</h2>
+        <div class="ContactMe">
+           
+            <p class="text-white text-center mt-6">Liked my Work or Want to know more about me :</p>
+            <div class="socials flex justify-around mt-2">
+             
+                <a href="mailto:talha0750@gmail.com" target="_blank">
+                    <button class="bg-blue-500 w-44 rounded-lg h-12 text-center flex flex-row hover:capitalize hover:bg-blue-950"> 
+                    <i class="fas fa-envelope text-xl text-white text-center mt-3 ml-2 hover:text-blue-500"></i>
+                    <p class="text-white ml-4 mt-3">Send me a Mail
+                    </p></button></a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="bg-gray-900">
+        <hr class="eight my-8">
+        <h3 class="footer text-xl font-bold ml-4 md:ml-2 text-white" >X Developers</h3>
+        <p class="footer text-lg ml-4 md:ml-2 text-white">EST.2023</p>
+        <p class="footer2 text-md text-center text-white mt-2 md:mt-0">
+            "Softwares To Reach Your Destination"
+            <br>All Rights Reserved@2024
+        </p></div>
+    
+    </footer>
+</div>
+</div>
+    <script>
+        function toggleSidebar() {
+            var checkbox = document.getElementById("check");
+            if (checkbox.checked) {
+                checkbox.checked = false;
+                var animatedText = document.getElementById('animatedText');
+            animatedText.classList.toggle('hidden');
+            }
+           
+        }
+
+        function downloadcv() {
+    var url = 'Muhammad_Talha_Resume.pdf';
+    
+    var a = document.createElement('a');
+    a.href = url;
+    
+    a.download = 'Muhammad_Talha_Resume.pdf';
+    
+    document.body.appendChild(a);
+    a.click();
+    
+    document.body.removeChild(a);
+}
+window.addEventListener('load', function () {
+    var preloader = document.getElementById('preloader');
+    var mainContent = document.getElementById('main-content');
+    var minimumTime = 1200; 
+    var loadTime = performance.now(); 
+
+    function hidePreloader() {
+        var currentTime = performance.now();
+        var elapsedTime = currentTime - loadTime;
+        if (elapsedTime >= minimumTime) {
+            preloader.style.display = 'none';
+            mainContent.classList.add('fade-in');
+        } else {
+            setTimeout(hidePreloader, minimumTime - elapsedTime);
+        }
+    }
+
+    hidePreloader();
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.fade-in-bottom');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Uncomment the next line to trigger the animation only once
+                // observer.unobserve(entry.target);
+            } else {
+                // Remove the 'visible' class if you want the animation to repeat
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+
+
+</script>
+<script>
+    let currentIndex = 0;
+    const carousel = document.getElementById("carousel");
+    const items = document.querySelectorAll(".carousel-item");
+    const totalItems = items.length;
+
+    function updateCarousel() {
+        const itemWidth = items[0].offsetWidth;
+        const newTransform = -currentIndex * itemWidth;
+        carousel.style.transform = `translateX(${newTransform}px)`;
+        updateButtons(); // Update buttons based on current index
+    }
+
+    function updateButtons() {
+        document.getElementById("left-btn").disabled = currentIndex === 0;
+        document.getElementById("right-btn").disabled = currentIndex === totalItems - Math.ceil(carouselContainerWidth() / itemWidth());
+    }
+
+    function carouselContainerWidth() {
+        return document.querySelector(".carousel-container").offsetWidth;
+    }
+
+    function itemWidth() {
+        return items[0].offsetWidth;
+    }
+
+    function moveLeft() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    }
+
+    function moveRight() {
+        const itemsInView = Math.ceil(carouselContainerWidth() / itemWidth());
+        if (currentIndex < totalItems - itemsInView) {
+            currentIndex++;
+            updateCarousel();
+        }
+    }
+
+    window.addEventListener("resize", updateCarousel);
+    window.addEventListener("DOMContentLoaded", updateCarousel);
+</script>
+</body>
+
+</html>
