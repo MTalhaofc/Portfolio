@@ -1,6 +1,9 @@
 # ✨ MTalha's Digital Canvas ✨
 
 ---
+[![Screenshot of MTalha's Portfolio Website](https://raw.githubusercontent.com/MTalhaofc/Portfolio/refs/heads/main/XDEV_PORTFOLIO_VIEWPAGE.png)](https://matalha.github.io/Portfolio)
+
+---
 
 ## Welcome to My Portfolio!
 
@@ -53,7 +56,7 @@ Want to run this project locally? It's super easy!
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/MTalhaofc/Portfolio.git
+    git clone [https://github.com/MTalhaofc/Portfolio.git](https://github.com/MTalhaofc/Portfolio.git)
     ```
 2.  **Open `index.html` in your browser:** Simply double-click the `index.html` file, or open it via your favorite code editor's "Open in Browser" feature (e.g., Live Server in VS Code).
 
