@@ -1,38 +1,100 @@
-.contact-section {
-  padding: 60px 0 0;
+  .contact-section {
+  padding: 40px 0 0;
   color: white;
   text-align: center;
 }
 
 .contact-intro {
   font-size: 1.1em;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   opacity: 0.9;
 }
 
 .contact-info {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-bottom: 60px;
+  gap: 20px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-info a:visited {
+  color: inherit;
+}
+
+.contact-info a:hover {
+  text-decoration: none;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 15px 25px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 25px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-  transition: all 0.3s ease;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  border-radius: 12px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95em;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-icon {
+  font-size: 1.5em;
+}
+
+.contact-icon.linkedin {
+  color: #0077b5;
+}
+
+.contact-icon.github {
+  color: #333;
+}
+
+.contact-icon.topmate {
+  color: #ff6b35;
+}
+
+.contact-icon.blog {
+  color: #1a73e8;
+}
+
+.contact-icon.linktree {
+  color: #39e09b;
 }
 
 .contact-item:hover {
-  background: rgba(255,255,255,0.2);
-  transform: translateY(-5px);
+  background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1));
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.contact-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.6s;
+}
+
+.contact-item:hover::before {
+  left: 100%;
 }
 
 .icon {

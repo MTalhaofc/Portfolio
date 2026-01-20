@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import './Experience.css';
 
 const Experience = () => {
@@ -61,7 +63,10 @@ const Experience = () => {
                 <p className="description">{exp.description}</p>
                 <ul className="achievements">
                   {exp.achievements.map((achievement, i) => (
-                    <li key={i}>{achievement}</li>
+                    <li key={i}>
+                      <FontAwesomeIcon icon={faCheckCircle} className="achievement-icon" />
+                      {achievement}
+                    </li>
                   ))}
                 </ul>
               </div>

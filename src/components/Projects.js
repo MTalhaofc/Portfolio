@@ -1,103 +1,151 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faNodeJs, faJs, faPython, faVuejs, faAngular, faDocker, faGithub, faAndroid, faJava, faPhp, faLaravel, faBootstrap, faHtml5, faCss3Alt, faAws } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faFire, faCode, faExternalLinkAlt, faChevronLeft, faChevronRight, faServer, faMobile, faCloud } from '@fortawesome/free-solid-svg-icons';
 import './Projects.css';
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
+  const [direction, setDirection] = useState(0);
+  
+  const getTechIcon = (tech) => {
+    const icons = {
+      'React': { icon: faReact, color: '#61DAFB' },
+      'React Native': { icon: faReact, color: '#61DAFB' },
+      'Node.js': { icon: faNodeJs, color: '#339933' },
+      'JavaScript': { icon: faJs, color: '#F7DF1E' },
+      'Python': { icon: faPython, color: '#3776AB' },
+      'Java': { icon: faJava, color: '#ED8B00' },
+      'Android': { icon: faAndroid, color: '#3DDC84' },
+      'Vue.js': { icon: faVuejs, color: '#4FC08D' },
+      'Angular': { icon: faAngular, color: '#DD0031' },
+      'Docker': { icon: faDocker, color: '#2496ED' },
+      'PHP': { icon: faPhp, color: '#777BB4' },
+      'Laravel': { icon: faLaravel, color: '#FF2D20' },
+      'Bootstrap': { icon: faBootstrap, color: '#7952B3' },
+      'HTML5': { icon: faHtml5, color: '#E34F26' },
+      'CSS3': { icon: faCss3Alt, color: '#1572B6' },
+      'AWS': { icon: faAws, color: '#FF9900' },
+      'MongoDB': { icon: faDatabase, color: '#47A248' },
+      'PostgreSQL': { icon: faDatabase, color: '#336791' },
+      'MySQL': { icon: faDatabase, color: '#4479A1' },
+      'Firebase': { icon: faFire, color: '#FFCA28' },
+      'Express': { icon: faServer, color: '#000000' },
+      'Spring Boot': { icon: faCode, color: '#6DB33F' },
+      'Flutter': { icon: faMobile, color: '#02569B' },
+      'Kotlin': { icon: faAndroid, color: '#7F52FF' },
+      'Swift': { icon: faMobile, color: '#FA7343' },
+      'Redux': { icon: faJs, color: '#764ABC' },
+      'Stripe': { icon: faCode, color: '#635BFF' },
+      'JWT': { icon: faCode, color: '#000000' },
+      'WebRTC': { icon: faCode, color: '#FF6B6B' },
+      'OpenAI': { icon: faCode, color: '#412991' },
+      'Flask': { icon: faPython, color: '#000000' },
+      'Socket.io': { icon: faNodeJs, color: '#010101' },
+      'NLP': { icon: faCode, color: '#FF6B35' },
+      'Markdown': { icon: faCode, color: '#083FA1' },
+      'PWA': { icon: faCode, color: '#5A0FC8' },
+      'Heroku': { icon: faCloud, color: '#430098' },
+      'Netlify': { icon: faCloud, color: '#00C7B7' }
+    };
+    return icons[tech] || { icon: faCode, color: '#666666' };
+  };
   
   const projects = [
     {
-      title: "GearNexus Web Platform",
-      description: "Full-stack e-commerce platform with modern UI/UX, product catalog, and secure payment integration.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "/images/Gearnexusweb.png",
-      liveUrl: "https://example.com/gearnexus-web",
-      githubUrl: "https://github.com/username/gearnexus-web"
-    },
-    {
-      title: "GearNexus Mobile",
-      description: "Mobile version of GearNexus e-commerce platform with optimized mobile experience and native features.",
-      tags: ["React Native", "Redux", "Firebase", "Stripe"],
-      image: "/images/GearNexus.png",
-      liveUrl: "https://example.com/gearnexus-mobile",
-      githubUrl: "https://github.com/username/gearnexus-mobile"
-    },
-    {
-      title: "EZ Health Web Portal",
-      description: "Healthcare management web application for doctors and patients with appointment scheduling and medical records.",
-      tags: ["React", "Node.js", "PostgreSQL", "JWT"],
+      title: "Ez Health Web",
+      description:
+        "Healthcare web platform for managing patients, appointments, and medical records with an intuitive UI.",
+      tags: ["React", "Firebase", "AI", "Healthcare"],
       image: "/images/ez_health_web.png",
-      liveUrl: "https://example.com/ezhealth-web",
-      githubUrl: "https://github.com/username/ezhealth-web"
+      githubUrl: "https://github.com/MTalhaofc/EzHealth",
     },
     {
-      title: "EZ Health Mobile App",
-      description: "Mobile healthcare app for patients with real-time notifications, telemedicine, and health tracking features.",
-      tags: ["React Native", "Firebase", "WebRTC", "Push Notifications"],
-      image: "/images/ez_health_mobile.png",
-      liveUrl: "https://example.com/ezhealth-mobile",
-      githubUrl: "https://github.com/username/ezhealth-mobile"
-    },
-    {
-      title: "AI Text Summarizer",
-      description: "AI-powered text summarization tool using advanced NLP models to generate concise summaries from documents.",
-      tags: ["Python", "OpenAI", "React", "Flask"],
-      image: "/images/ai_text_summarizer.png",
-      liveUrl: "https://example.com/ai-summarizer",
-      githubUrl: "https://github.com/username/ai-summarizer"
-    },
-    {
-      title: "TTalks Communication Platform",
-      description: "Real-time communication platform with video conferencing, instant messaging, and file sharing capabilities.",
-      tags: ["React", "WebRTC", "Socket.io", "Node.js"],
-      image: "/images/TTalks.png",
-      liveUrl: "https://example.com/ttalks",
-      githubUrl: "https://github.com/username/ttalks"
-    },
-    {
-      title: "PaperSum Research Tool",
-      description: "Academic research tool for document management with AI-powered summarization and citation tracking.",
-      tags: ["React", "Python", "NLP", "PostgreSQL"],
+      title: "CUI PaperSum",
+      description:
+        "Academic research tool that summarizes documents using NLP to help students and researchers save time.",
+      tags: ["Python", "NLP", "AI"],
       image: "/images/papersum1.png",
-      liveUrl: "https://example.com/papersum",
-      githubUrl: "https://github.com/username/papersum"
+      githubUrl: "https://github.com/MTalhaofc/cui_papersum",
+    },
+    {
+      title: "Ez Health Mobile App",
+      description:
+        "Android healthcare application enabling users to manage health data and access medical services.",
+      tags: ["Android", "Java", "Firebase"],
+      image: "/images/ez_health_mobile.png",
+      githubUrl: "https://github.com/MTalhaofc/Ez-Health-Android-App",
+    },
+    {
+      title: "GearNexus Web",
+      description:
+        "E-commerce web platform for automotive accessories with modern UI and scalable structure.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      image: "/images/Gearnexusweb.png",
+      githubUrl: "https://github.com/MTalhaofc/GearNexusWeb",
+    },
+    {
+      title: "GearNexus Android App",
+      description:
+        "Android-based e-commerce application for browsing and purchasing automotive products.",
+      tags: ["Android", "Java", "E-commerce"],
+      image: "/images/GearNexus.png",
+      githubUrl: "https://github.com/MTalhaofc/GearNexusApp-Android",
+    },
+    {
+      title: "Carea",
+      description:
+        "Career-focused web application designed to support professional growth and skill development.",
+      tags: ["Web App", "Frontend", "UI/UX"],
+      image: "/images/Group 2.png",
+      githubUrl: "https://github.com/MTalhaofc/Carea",
     },
     {
       title: "Notes App",
-      description: "Simple and elegant note-taking application with markdown support, categories, and cloud synchronization.",
-      tags: ["React", "Firebase", "Markdown", "PWA"],
+      description:
+        "Lightweight Android notes application with a clean interface and local data persistence.",
+      tags: ["Android", "Java", "SQLite"],
       image: "/images/notesapp.png",
-      liveUrl: "https://example.com/notes-app",
-      githubUrl: "https://github.com/username/notes-app"
+      githubUrl: "https://github.com/MTalhaofc/Notesapp",
     },
     {
-      title: "Group Project 2",
-      description: "Collaborative project management tool with team coordination, task tracking, and progress visualization.",
-      tags: ["Vue.js", "Express", "MongoDB", "Socket.io"],
-      image: "/images/Group 2.png",
-      liveUrl: "https://example.com/group-project-2",
-      githubUrl: "https://github.com/username/group-project-2"
+      title: "AI Text Summarizer",
+      description:
+        "AI-powered tool that converts long text into concise summaries using NLP techniques.",
+      tags: ["Python", "AI", "NLP"],
+      image: "/images/ai_text_summarizer.png",
+      githubUrl: "https://github.com/MTalhaofc/AI_Text_Summarizer",
     },
     {
-      title: "Group Project 3",
-      description: "Advanced team collaboration platform with real-time editing, version control, and project analytics.",
-      tags: ["Angular", "Spring Boot", "MySQL", "Docker"],
-      image: "/images/Group 3.png",
-      liveUrl: "https://example.com/group-project-3",
-      githubUrl: "https://github.com/username/group-project-3"
-    }
+      title: "TTalks",
+      description:
+        "Real-time communication platform focused on messaging and collaboration.",
+      tags: ["React", "Real-time", "Communication"],
+      image: "/images/TTalks.png",
+      githubUrl: "https://github.com/MTalhaofc/TTalks",
+    },
   ];
+  
+  const getVisibleProjects = () => {
+    const isMobile = window.innerWidth <= 768;
+    const projectCount = isMobile ? 1 : 4;
+    const visible = [];
+    for (let i = 0; i < projectCount; i++) {
+      const index = (currentProject + i) % projects.length;
+      visible.push(projects[index]);
+    }
+    return visible;
+  };
 
   const nextProject = () => {
+    setDirection(1);
     setCurrentProject((prev) => (prev + 1) % projects.length);
   };
 
   const prevProject = () => {
+    setDirection(-1);
     setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
-  };
-
-  const goToProject = (index) => {
-    setCurrentProject(index);
   };
 
   return (
@@ -113,64 +161,94 @@ const Projects = () => {
           Featured Projects
         </motion.h2>
         
-        <div className="carousel-container">
-          <button className="carousel-btn prev" onClick={prevProject}>
-            &#8249;
-          </button>
-          
-          <div className="carousel-wrapper">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentProject}
-                className="project-card"
-                initial={{ opacity: 0, x: 300 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="project-image">
-                  <img 
-                    src={projects[currentProject].image} 
-                    alt={projects[currentProject].title}
-                    onError={(e) => {
-                      e.target.src = `https://via.placeholder.com/600x300/1a1a2e/4a9eff?text=${encodeURIComponent(projects[currentProject].title)}`;
-                    }}
+        <div className="projects-container">
+          <div className="projects-carousel">
+            <div className="projects-track">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentProject}
+                  className="projects-slide"
+                  initial={{ x: direction > 0 ? 100 : -100 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  {getVisibleProjects().map((project, index) => (
+                    <div
+                      key={`${currentProject}-${index}`}
+                      className="project-card"
+                    >
+                      <div className="project-image-container">
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="project-image"
+                          onError={(e) => {
+                            e.target.src = `https://via.placeholder.com/400x200/1a1a2e/4a9eff?text=${encodeURIComponent(project.title)}`;
+                          }}
+                        />
+                        <div className="project-overlay">
+                          <div className="overlay-content">
+                            <FontAwesomeIcon icon={faExternalLinkAlt} size="2x" />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="project-info">
+                        <h3 className="project-title">{project.title}</h3>
+                        <p className="project-description">{project.description}</p>
+                        
+                        <div className="project-tech">
+                          {project.tags.map((tag, i) => {
+                            const techIcon = getTechIcon(tag);
+                            return (
+                              <FontAwesomeIcon 
+                                key={i}
+                                icon={techIcon.icon} 
+                                style={{ color: techIcon.color }}
+                                className="tech-icon"
+                                title={tag}
+                              />
+                            );
+                          })}
+                        </div>
+                        
+                        <div className="project-actions">
+                          {/* <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="action-btn primary">
+                            <FontAwesomeIcon icon={faExternalLinkAlt} />
+                            <span>Live Demo</span>
+                          </a> */}
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="action-btn secondary">
+                            <FontAwesomeIcon icon={faGithub} />
+                            <span>Code</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+            
+            <div className="carousel-controls">
+              <button className="carousel-nav" onClick={prevProject}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </button>
+              
+              <div className="carousel-dots">
+                {projects.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`dot ${index === currentProject ? 'active' : ''}`}
+                    onClick={() => setCurrentProject(index)}
                   />
-                </div>
-                <div className="project-content">
-                  <h3>{projects[currentProject].title}</h3>
-                  <p>{projects[currentProject].description}</p>
-                  <div className="tech-tags">
-                    {projects[currentProject].tags.map((tag, i) => (
-                      <span key={i} className="tech-tag">{tag}</span>
-                    ))}
-                  </div>
-                  <div className="project-links">
-                    <a href={projects[currentProject].liveUrl} target="_blank" rel="noopener noreferrer" className="project-link live">
-                      View Live
-                    </a>
-                    <a href={projects[currentProject].githubUrl} target="_blank" rel="noopener noreferrer" className="project-link github">
-                      GitHub
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                ))}
+              </div>
+              
+              <button className="carousel-nav" onClick={nextProject}>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </button>
+            </div>
           </div>
-          
-          <button className="carousel-btn next" onClick={nextProject}>
-            &#8250;
-          </button>
-        </div>
-        
-        <div className="carousel-indicators">
-          {projects.map((_, index) => (
-            <button
-              key={index}
-              className={`indicator ${index === currentProject ? 'active' : ''}`}
-              onClick={() => goToProject(index)}
-            />
-          ))}
         </div>
       </div>
     </section>

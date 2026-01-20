@@ -1,12 +1,12 @@
 .experience-section {
-  padding: 100px 0;
+  padding: 30px 0;
   background: #0f0f0f;
   color: #ffffff;
 }
 
 .experience-timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -23,16 +23,16 @@
 
 .experience-item {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .experience-item::before {
   content: '';
   position: absolute;
   left: 50%;
-  top: 20px;
-  width: 12px;
-  height: 12px;
+  top: 15px;
+  width: 10px;
+  height: 10px;
   background: #4a9eff;
   border-radius: 50%;
   transform: translateX(-50%);
@@ -41,43 +41,45 @@
 
 .experience-content {
   background: #1a1a2e;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  width: 45%;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  width: 42%;
   position: relative;
 }
 
 .experience-item:nth-child(odd) .experience-content {
-  margin-left: 55%;
+  margin-left: 58%;
 }
 
 .experience-item:nth-child(even) .experience-content {
-  margin-right: 55%;
+  margin-right: 58%;
 }
 
 .experience-header h3 {
   color: #4a9eff;
-  font-size: 1.4em;
-  margin-bottom: 5px;
+  font-size: 1.1em;
+  margin-bottom: 4px;
 }
 
 .company {
   color: #4a9eff;
   font-weight: 600;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
+  font-size: 0.9em;
 }
 
 .period {
   color: #ccc;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-style: italic;
 }
 
 .description {
-  margin: 15px 0;
-  line-height: 1.6;
+  margin: 10px 0;
+  line-height: 1.5;
+  font-size: 0.85em;
 }
 
 .achievements {
@@ -88,17 +90,18 @@
 .achievements li {
   position: relative;
   padding-left: 20px;
-  margin-bottom: 8px;
-}
-
-.achievements li::before {
-  content: '▶';
-  position: absolute;
-  left: 0;
-  color: #4a9eff;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: flex-start;
   font-size: 0.8em;
 }
 
+.achievement-icon {
+  color: #28a745;
+  margin-right: 8px;
+  font-size: 0.8em;
+  margin-top: 2px;
+}
 @media (max-width: 768px) {
   .experience-timeline::before {
     left: 20px;
