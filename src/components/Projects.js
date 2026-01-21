@@ -58,7 +58,7 @@ const Projects = () => {
       description:
         "Healthcare web platform for managing patients, appointments, and medical records with an intuitive UI.",
       tags: ["React", "Firebase", "AI", "Healthcare"],
-      image: "/images/ez_health_web.png",
+      image: `${process.env.PUBLIC_URL}/images/ez_health_web.png`,
       githubUrl: "https://github.com/MTalhaofc/EzHealth",
     },
     {
@@ -66,7 +66,7 @@ const Projects = () => {
       description:
         "Academic research tool that summarizes documents using NLP to help students and researchers save time.",
       tags: ["Python", "NLP", "AI"],
-      image: "/images/papersum1.png",
+      image: `${process.env.PUBLIC_URL}/images/papersum1.png`,
       githubUrl: "https://github.com/MTalhaofc/cui_papersum",
     },
     {
@@ -74,7 +74,7 @@ const Projects = () => {
       description:
         "Android healthcare application enabling users to manage health data and access medical services.",
       tags: ["Android", "Java", "Firebase"],
-      image: "/images/ez_health_mobile.png",
+      image: `${process.env.PUBLIC_URL}/images/ez_health_mobile.png`,
       githubUrl: "https://github.com/MTalhaofc/Ez-Health-Android-App",
     },
     {
@@ -82,7 +82,7 @@ const Projects = () => {
       description:
         "E-commerce web platform for automotive accessories with modern UI and scalable structure.",
       tags: ["HTML", "CSS", "JavaScript"],
-      image: "/images/Gearnexusweb.png",
+      image: `${process.env.PUBLIC_URL}/images/Gearnexusweb.png`,
       githubUrl: "https://github.com/MTalhaofc/GearNexusWeb",
     },
     {
@@ -90,7 +90,7 @@ const Projects = () => {
       description:
         "Android-based e-commerce application for browsing and purchasing automotive products.",
       tags: ["Android", "Java", "E-commerce"],
-      image: "/images/GearNexus.png",
+      image: `${process.env.PUBLIC_URL}/images/GearNexus.png`,
       githubUrl: "https://github.com/MTalhaofc/GearNexusApp-Android",
     },
     {
@@ -98,7 +98,7 @@ const Projects = () => {
       description:
         "Career-focused web application designed to support professional growth and skill development.",
       tags: ["Web App", "Frontend", "UI/UX"],
-      image: "/images/Group 2.png",
+      image: `${process.env.PUBLIC_URL}/images/Group 2.png`,
       githubUrl: "https://github.com/MTalhaofc/Carea",
     },
     {
@@ -106,7 +106,7 @@ const Projects = () => {
       description:
         "Lightweight Android notes application with a clean interface and local data persistence.",
       tags: ["Android", "Java", "SQLite"],
-      image: "/images/notesapp.png",
+      image: `${process.env.PUBLIC_URL}/images/notesapp.png`,
       githubUrl: "https://github.com/MTalhaofc/Notesapp",
     },
     {
@@ -114,7 +114,7 @@ const Projects = () => {
       description:
         "AI-powered tool that converts long text into concise summaries using NLP techniques.",
       tags: ["Python", "AI", "NLP"],
-      image: "/images/ai_text_summarizer.png",
+      image: `${process.env.PUBLIC_URL}/images/ai_text_summarizer.png`,
       githubUrl: "https://github.com/MTalhaofc/AI_Text_Summarizer",
     },
     {
@@ -122,7 +122,7 @@ const Projects = () => {
       description:
         "Real-time communication platform focused on messaging and collaboration.",
       tags: ["React", "Real-time", "Communication"],
-      image: "/images/TTalks.png",
+      image: `${process.env.PUBLIC_URL}/images/TTalks.png`,
       githubUrl: "https://github.com/MTalhaofc/TTalks",
     },
   ];
