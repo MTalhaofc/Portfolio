@@ -19,8 +19,11 @@ const Header = () => {
           animate={{ scale: 1 }}
           transition={{ delay: 0.5, type: "spring", stiffness: 260, damping: 20 }}
         >
-          <img src={`${process.env.PUBLIC_URL}/images/mtalhaofc_image.png`} alt="Muhammad Talha" />
-        </motion.div>
+         <img
+  src={process.env.PUBLIC_URL + "/images/mtalhaofc_image.png"}
+  alt="Muhammad Talha"
+/>
+          </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

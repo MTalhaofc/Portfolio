@@ -11,6 +11,7 @@
     "react-dom": "^18.2.0"
   },
   "homepage": "https://MTalhaofc.github.io/Portfolio",
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
