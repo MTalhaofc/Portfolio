@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.4fbeb402.css",
+    "main.js": "/Portfolio/static/js/main.2352449c.js",
+    "static/media/mtalhaofc_image.png": "/Portfolio/static/media/mtalhaofc_image.f1f031bb4c335215a3de.png",
+    "index.html": "/Portfolio/index.html",
+    "main.4fbeb402.css.map": "/Portfolio/static/css/main.4fbeb402.css.map",
+    "main.2352449c.js.map": "/Portfolio/static/js/main.2352449c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fbeb402.css",
+    "static/js/main.2352449c.js"
+  ]
+}
