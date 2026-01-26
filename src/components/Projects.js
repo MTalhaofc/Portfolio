@@ -129,7 +129,11 @@ const Projects = () => {
   
   const getVisibleProjects = () => {
     const isMobile = window.innerWidth <= 768;
-    const projectCount = isMobile ? 1 : 4;
+    if (isMobile) {
+      return [projects[currentProject]];
+    }
+    
+    const projectCount = window.innerWidth <= 1024 ? 2 : 4;
     const visible = [];
     for (let i = 0; i < projectCount; i++) {
       const index = (currentProject + i) % projects.length;

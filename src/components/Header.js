@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import profileImg from "../assets/mtalhaofc_image.png";
 
 import './Header.css';
 
@@ -19,9 +19,10 @@ const Header = () => {
           animate={{ scale: 1 }}
           transition={{ delay: 0.5, type: "spring", stiffness: 260, damping: 20 }}
         >
-         <img
-  src={process.env.PUBLIC_URL + "/images/mtalhaofc_image.png"}
+   <img
+  src={profileImg}
   alt="Muhammad Talha"
+  className="profile-img"
 />
           </motion.div>
         <motion.h1
