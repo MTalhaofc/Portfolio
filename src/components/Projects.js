@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faNodeJs, faJs, faPython, faVuejs, faAngular, faDocker, faGithub, faAndroid, faJava, faPhp, faLaravel, faBootstrap, faHtml5, faCss3Alt, faAws } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faFire, faCode, faExternalLinkAlt, faChevronLeft, faChevronRight, faServer, faMobile, faCloud } from '@fortawesome/free-solid-svg-icons';
+import { faDatabase, faFire, faCode,faBolt, faExternalLinkAlt, faChevronLeft, faChevronRight, faServer, faMobile, faCloud } from '@fortawesome/free-solid-svg-icons';
+
+
 import './Projects.css';
 
 const Projects = () => {
@@ -47,7 +49,14 @@ const Projects = () => {
       'Markdown': { icon: faCode, color: '#083FA1' },
       'PWA': { icon: faCode, color: '#5A0FC8' },
       'Heroku': { icon: faCloud, color: '#430098' },
-      'Netlify': { icon: faCloud, color: '#00C7B7' }
+      'Netlify': { icon: faCloud, color: '#00C7B7' },
+      'Laravel':  { icon: faLaravel,  color: '#FF2D20' }, // Laravel red
+      'Python ':   { icon: faPython,   color: '#3776AB' }, // Python blue
+      'Tailwind' : { icon: faJs,       color: '#38BDF8' }, // Tailwind cyan (best FA fallback)
+      'Postman' :  { icon: faBolt,     color: '#FF6C37' }, // Postman orange (no official FA brand)
+      'SQL' :      { icon: faDatabase, color: '#336791' }, // SQL blue
+     ' MySQL' :    { icon: faDatabase, color: '#4479A1' }, // MySQL blue
+      'Vite' :     { icon: faBolt,     color: '#646CFF' } // Vite purple
     };
     return icons[tech] || { icon: faCode, color: '#666666' };
   };
@@ -57,7 +66,7 @@ const Projects = () => {
       title: "Ez Health Web",
       description:
         "Healthcare web platform for managing patients, appointments, and medical records with an intuitive UI.",
-      tags: ["React", "Firebase", "AI", "Healthcare"],
+      tags: ["Laravel", "Tailwind", "Firebase", "Vite"],
       image: `${process.env.PUBLIC_URL}/images/ez_health_web.png`,
       githubUrl: "https://github.com/MTalhaofc/EzHealth",
     },
@@ -65,7 +74,7 @@ const Projects = () => {
       title: "CUI PaperSum",
       description:
         "Academic research tool that summarizes documents using NLP to help students and researchers save time.",
-      tags: ["Python", "NLP", "AI"],
+      tags: ["Laravel", "MySQL", "Heroku" , "Vite" , "Tailwind"],
       image: `${process.env.PUBLIC_URL}/images/papersum1.png`,
       githubUrl: "https://github.com/MTalhaofc/cui_papersum",
     },
@@ -86,7 +95,7 @@ const Projects = () => {
       githubUrl: "https://github.com/MTalhaofc/GearNexusWeb",
     },
     {
-      title: "GearNexus Android App",
+      title: "GearNexus  App",
       description:
         "Android-based e-commerce application for browsing and purchasing automotive products.",
       tags: ["Android", "Java", "E-commerce"],
@@ -126,6 +135,14 @@ const Projects = () => {
       githubUrl: "https://github.com/MTalhaofc/TTalks",
     },
   ];
+
+  // Preload all images
+  useEffect(() => {
+    projects.forEach(project => {
+      const img = new Image();
+      img.src = project.image;
+    });
+  }, []);
   
   const getVisibleProjects = () => {
     const isMobile = window.innerWidth <= 768;
@@ -174,7 +191,7 @@ const Projects = () => {
                   className="projects-slide"
                   initial={{ x: direction > 0 ? 100 : -100 }}
                   animate={{ x: 0 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  transition={{ duration: 1.5, ease: "easeInOut", type: "spring", stiffness: 50, damping: 20 }}
                 >
                   {getVisibleProjects().map((project, index) => (
                     <div
