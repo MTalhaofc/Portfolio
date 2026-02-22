@@ -6,22 +6,22 @@ import './Skills.css';
 
 const Skills = () => {
   const skills = [
-    {
-      icon: faTools,
-      title: "Tools & Platforms",
-      description: "Azure Data Factory, SSIS, Snowflake, SQL Server, Oracle, Azure Blob Storage, AWS S3, Tableau, VS Code"
-    },
-    {
-      icon: faCode,
-      title: "Tech Stack",
-      description: "Laravel, REST APIs, SQL/Database Integrations, Authentication, Server-Side Logic, Third-Party Service Integrations"
-    },
-    {
-      icon: faChartLine,
-      title: "Expertise & Practices",
-      description: "ETL Pipelines, Data Warehousing, Data Architecture, Advanced BI Reporting, Performance Tuning, Cloud Data Management"
-    }
-  ];
+      {
+        icon: faTools,
+        title: "Tools & Platforms",
+        description: "Power BI, Tableau, Azure Data Factory, SSIS, Snowflake, SQL Server, Oracle, Azure Blob Storage"
+      },
+      {
+        icon: faCode,
+        title: "Tech Stack",
+        description: "Laravel, Python, SQL, REST APIs, MySQL, Android, Firebase, Auth Systems, Backend & API Development"
+      },
+      {
+        icon: faChartLine,
+        title: "Data Expertise",
+        description: "ETL Development, Data Warehousing, Data Modeling, BI Reporting, Dashboard Development"
+      }
+    ];
 
   const containerVariants = {
     hidden: { opacity: 0 },

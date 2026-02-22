@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faNodeJs, faJs, faPython, faVuejs, faAngular, faDocker, faGithub, faAndroid, faJava, faPhp, faLaravel, faBootstrap, faHtml5, faCss3Alt, faAws } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faFire, faCode,faBolt, faExternalLinkAlt, faChevronLeft, faChevronRight, faServer, faMobile, faCloud } from '@fortawesome/free-solid-svg-icons';
+import { faDatabase, faFire, faCode,faBolt,faWind, faExternalLinkAlt, faChevronLeft, faChevronRight, faServer, faMobile, faCloud } from '@fortawesome/free-solid-svg-icons';
 
 
 import './Projects.css';
@@ -10,6 +10,7 @@ import './Projects.css';
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [imageCache, setImageCache] = useState(new Map());
   
   const getTechIcon = (tech) => {
     const icons = {
@@ -36,7 +37,6 @@ const Projects = () => {
       'Express': { icon: faServer, color: '#000000' },
       'Spring Boot': { icon: faCode, color: '#6DB33F' },
       'Flutter': { icon: faMobile, color: '#02569B' },
-      'Kotlin': { icon: faAndroid, color: '#7F52FF' },
       'Swift': { icon: faMobile, color: '#FA7343' },
       'Redux': { icon: faJs, color: '#764ABC' },
       'Stripe': { icon: faCode, color: '#635BFF' },
@@ -56,7 +56,8 @@ const Projects = () => {
       'Postman' :  { icon: faBolt,     color: '#FF6C37' }, // Postman orange (no official FA brand)
       'SQL' :      { icon: faDatabase, color: '#336791' }, // SQL blue
      ' MySQL' :    { icon: faDatabase, color: '#4479A1' }, // MySQL blue
-      'Vite' :     { icon: faBolt,     color: '#646CFF' } // Vite purple
+      'Vite' :     { icon: faBolt,     color: '#646CFF' }, // Vite purple
+      'XML':      { icon: faCode,     color: '#E34F26' }, // XML orange
     };
     return icons[tech] || { icon: faCode, color: '#666666' };
   };
@@ -82,7 +83,7 @@ const Projects = () => {
       title: "Ez Health Mobile App",
       description:
         "Android healthcare application enabling users to manage health data and access medical services.",
-      tags: ["Android", "Java", "Firebase"],
+      tags: ["Android", "Java", "XML", "Firebase"],
       image: `${process.env.PUBLIC_URL}/images/ez_health_mobile.png`,
       githubUrl: "https://github.com/MTalhaofc/Ez-Health-Android-App",
     },
@@ -90,7 +91,7 @@ const Projects = () => {
       title: "GearNexus Web",
       description:
         "E-commerce web platform for automotive accessories with modern UI and scalable structure.",
-      tags: ["HTML", "CSS", "JavaScript"],
+      tags: ["HTML", "Tailwind", "JavaScript"],
       image: `${process.env.PUBLIC_URL}/images/Gearnexusweb.png`,
       githubUrl: "https://github.com/MTalhaofc/GearNexusWeb",
     },
@@ -98,7 +99,7 @@ const Projects = () => {
       title: "GearNexus  App",
       description:
         "Android-based e-commerce application for browsing and purchasing automotive products.",
-      tags: ["Android", "Java", "E-commerce"],
+      tags: ["Android", "Java", "Firebase"],
       image: `${process.env.PUBLIC_URL}/images/GearNexus.png`,
       githubUrl: "https://github.com/MTalhaofc/GearNexusApp-Android",
     },
@@ -106,7 +107,7 @@ const Projects = () => {
       title: "Carea",
       description:
         "Career-focused web application designed to support professional growth and skill development.",
-      tags: ["Web App", "Frontend", "UI/UX"],
+      tags: ["XML", "Android"],
       image: `${process.env.PUBLIC_URL}/images/Group 2.png`,
       githubUrl: "https://github.com/MTalhaofc/Carea",
     },
@@ -114,7 +115,7 @@ const Projects = () => {
       title: "Notes App",
       description:
         "Lightweight Android notes application with a clean interface and local data persistence.",
-      tags: ["Android", "Java", "SQLite"],
+      tags: ["Laravel", "SQL", "JavaScript"],
       image: `${process.env.PUBLIC_URL}/images/notesapp.png`,
       githubUrl: "https://github.com/MTalhaofc/Notesapp",
     },
@@ -122,7 +123,7 @@ const Projects = () => {
       title: "AI Text Summarizer",
       description:
         "AI-powered tool that converts long text into concise summaries using NLP techniques.",
-      tags: ["Python", "AI", "NLP"],
+      tags: ["Python", "JavaScript", ""],
       image: `${process.env.PUBLIC_URL}/images/ai_text_summarizer.png`,
       githubUrl: "https://github.com/MTalhaofc/AI_Text_Summarizer",
     },
@@ -130,18 +131,38 @@ const Projects = () => {
       title: "TTalks",
       description:
         "Real-time communication platform focused on messaging and collaboration.",
-      tags: ["React", "Real-time", "Communication"],
+      tags: ["Android", "Java", "XML"],
       image: `${process.env.PUBLIC_URL}/images/TTalks.png`,
       githubUrl: "https://github.com/MTalhaofc/TTalks",
     },
   ];
 
-  // Preload all images
+  // Preload and cache all images
   useEffect(() => {
-    projects.forEach(project => {
-      const img = new Image();
-      img.src = project.image;
-    });
+    const loadImages = async () => {
+      const cache = new Map();
+      
+      await Promise.all(
+        projects.map(project => 
+          new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => {
+              cache.set(project.image, img.src);
+              resolve();
+            };
+            img.onerror = () => {
+              cache.set(project.image, `https://via.placeholder.com/400x200/1a1a2e/4a9eff?text=${encodeURIComponent(project.title)}`);
+              resolve();
+            };
+            img.src = project.image;
+          })
+        )
+      );
+      
+      setImageCache(cache);
+    };
+    
+    loadImages();
   }, []);
   
   const getVisibleProjects = () => {
@@ -200,12 +221,10 @@ const Projects = () => {
                     >
                       <div className="project-image-container">
                         <img 
-                          src={project.image} 
+                          src={imageCache.get(project.image) || project.image} 
                           alt={project.title}
                           className="project-image"
-                          onError={(e) => {
-                            e.target.src = `https://via.placeholder.com/400x200/1a1a2e/4a9eff?text=${encodeURIComponent(project.title)}`;
-                          }}
+                          loading="eager"
                         />
                         <div className="project-overlay">
                           <div className="overlay-content">
