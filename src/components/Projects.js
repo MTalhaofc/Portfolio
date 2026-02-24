@@ -3,14 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faNodeJs, faJs, faPython, faVuejs, faAngular, faDocker, faGithub, faAndroid, faJava, faPhp, faLaravel, faBootstrap, faHtml5, faCss3Alt, faAws } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faFire, faCode,faBolt,faWind, faExternalLinkAlt, faChevronLeft, faChevronRight, faServer, faMobile, faCloud } from '@fortawesome/free-solid-svg-icons';
-
-
+import { useImageCache } from '../contexts/ImageCacheContext';
+import CachedImage from './CachedImage';
 import './Projects.css';
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [imageCache, setImageCache] = useState(new Map());
+  const { preloadImage } = useImageCache();
   
   const getTechIcon = (tech) => {
     const icons = {
@@ -137,33 +137,10 @@ const Projects = () => {
     },
   ];
 
-  // Preload and cache all images
+  // Preload all project images
   useEffect(() => {
-    const loadImages = async () => {
-      const cache = new Map();
-      
-      await Promise.all(
-        projects.map(project => 
-          new Promise((resolve) => {
-            const img = new Image();
-            img.onload = () => {
-              cache.set(project.image, img.src);
-              resolve();
-            };
-            img.onerror = () => {
-              cache.set(project.image, `https://via.placeholder.com/400x200/1a1a2e/4a9eff?text=${encodeURIComponent(project.title)}`);
-              resolve();
-            };
-            img.src = project.image;
-          })
-        )
-      );
-      
-      setImageCache(cache);
-    };
-    
-    loadImages();
-  }, []);
+    projects.forEach(project => preloadImage(project.image));
+  }, [preloadImage]);
   
   const getVisibleProjects = () => {
     const isMobile = window.innerWidth <= 768;
@@ -220,11 +197,10 @@ const Projects = () => {
                       className="project-card"
                     >
                       <div className="project-image-container">
-                        <img 
-                          src={imageCache.get(project.image) || project.image} 
+                        <CachedImage 
+                          src={project.image} 
                           alt={project.title}
                           className="project-image"
-                          loading="eager"
                         />
                         <div className="project-overlay">
                           <div className="overlay-content">

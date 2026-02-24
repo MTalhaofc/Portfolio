@@ -9,17 +9,17 @@ const Skills = () => {
       {
         icon: faTools,
         title: "Tools & Platforms",
-        description: "Power BI, Tableau, Azure Data Factory, SSIS, Snowflake, SQL Server, Oracle, Azure Blob Storage"
+        description: "Azure Data Factory, Power BI, Tableau, SSIS, Snowflake, SQL Server, Oracle, Azure Blob Storage"
       },
       {
         icon: faCode,
         title: "Tech Stack",
-        description: "Laravel, Python, SQL, REST APIs, MySQL, Android, Firebase, Auth Systems, Backend & API Development"
+        description: "Laravel, Python, SQL, REST APIs, MySQL, Android, Firebase, TailwindCSS, Backend & API Development"
       },
       {
         icon: faChartLine,
         title: "Data Expertise",
-        description: "ETL Development, Data Warehousing, Data Modeling, BI Reporting, Dashboard Development"
+        description: "ETL Development, S3 & Blob Integerations, Data Warehousing & Modeling, BI Reporting, Dashboard Development"
       }
     ];
 

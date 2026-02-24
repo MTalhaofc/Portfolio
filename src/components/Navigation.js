@@ -5,7 +5,7 @@ import './Navigation.css';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const navItems = ['About', 'Experience', 'Skills', 'Projects', 'Contact'];
+  const navItems = ['About', 'Experience', 'Skills', 'Projects', 'Blog', 'Contact'];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,6 +58,12 @@ const Navigation = () => {
       </motion.nav>
 
       <div className={`mobile-sidebar ${isOpen ? 'open' : ''}`}>
+        <div className="sidebar-header">
+          <span className="sidebar-title">Muhammad Talha</span>
+          <button className="sidebar-close" onClick={() => setIsOpen(false)}>
+            ×
+          </button>
+        </div>
         <div className="sidebar-content">
           {navItems.map((item, index) => (
             <a 

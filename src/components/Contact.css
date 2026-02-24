@@ -113,4 +113,9 @@
     align-items: center;
     gap: 20px;
   }
+  
+  .contact-item {
+    width: 200px;
+    justify-content: center;
+  }
 }
