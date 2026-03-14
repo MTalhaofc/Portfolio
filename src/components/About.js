@@ -23,8 +23,8 @@ const About = () => {
           viewport={{ once: true }}
         >
           <p>
-          Data Engineer specializing in data and database engineering with real-world industry exposure.
-          Community-driven technologist with hands-on experience in Laravel development.
+          Data Engineer specializing in data and database engineering with real world industry exposure.
+          Community driven technologist with hands on experience in Laravel development.
           </p>
         </motion.div>
       </div>
